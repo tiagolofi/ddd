@@ -15,6 +15,6 @@ class Main {
         Entidade entidade = new Entidade(); // Dados da entidade
         entidade.setPolitica("p1");
 
-        negocio.fluxoNegocialQueAplicaPoliticaX(entidade); // Aplicação do política/Execução do negócio
+        negocio.fluxoNegocialQueAplicaPolitica(entidade); // Aplicação do política/Execução do negócio
     }
 }
