@@ -1,5 +1,5 @@
 package domain;
 
 public interface Port {
-    void aplicaPoliticaX(Entidade entidade);
+    void aplicaPolitica(Entidade entidade);
 }
