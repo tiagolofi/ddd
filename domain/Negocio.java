@@ -1,13 +1,18 @@
+package domain;
+
+import java.util.logging.Logger;
+
 public class Negocio {
 
     private Port port;
+    private final Logger log = Logger.getLogger(Negocio.class.getName());
 
     public Negocio (Port port) {
         this.port = port;
     }
 
     public void fluxoNegocialQueAplicaPoliticaX(Entidade entidade) {
-        System.out.println("Política será aplicada para: " + entidade.getNome());
+        log.info("Política será aplicada para: " + entidade.getPolitica());
         this.port.aplicaPoliticaX(entidade);
     }
 
