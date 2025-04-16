@@ -11,7 +11,7 @@ public class Negocio {
         this.port = port;
     }
 
-    public void fluxoNegocialQueAplicaPoliticaX(Entidade entidade) {
+    public void fluxoNegocialQueAplicaPolitica(Entidade entidade) {
         log.info("Política será aplicada para: " + entidade.getPolitica());
         this.port.aplicaPolitica(entidade);
     }
