@@ -1,0 +1,28 @@
+title Domain Driven Design
+
+actor Usuário
+participant Aplicação
+participant Negocio (Regras de Negócio)
+participant Port (Interface)
+participant Adapter (Implementação das Políticas)
+
+Usuário->Aplicação:
+
+Aplicação->Negocio (Regras de Negócio): interage com o usuário para montar\n o objeto da requisição "Entidade"\n e transmite os dados para o negócio
+
+Port (Interface)->Negocio (Regras de Negócio):Define o contrato a ser recebido "Entidade"\ne o que deve ser retornado (aplicação da política)
+
+Adapter (Implementação das Políticas)->Port (Interface):Herda "Port" para implementar as regras de negócio
+
+Adapter (Implementação das Políticas)->Aplicação: é definida no escopo da aplicação (inversão de dependência) e instanciada como "Port",\ndesacoplando a dependência de um tipo "Adapter"
+
+group #blue CI/CD #white
+
+
+note over Aplicação: Novas funcionalidades são demandadas
+
+note over Adapter (Implementação das Políticas): A nova funcionalidade é adicionada
+
+Adapter (Implementação das Políticas)->Aplicação:haverá atualização dos contratos apenas se houver alteração nas regras de negócio ou a inclusão de novas entidades
+
+end
