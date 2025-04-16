@@ -11,7 +11,7 @@ public final class Adapter implements Port {
     private final Logger log = Logger.getLogger(Adapter.class.getName());
 
     @Override
-    public void aplicaPoliticaX(Entidade entidade) {
+    public void aplicaPolitica(Entidade entidade) {
         if (entidade == null) {
             throw new IllegalArgumentException("Entidade não pode ser nula");
         }
